@@ -68,11 +68,13 @@ Database viewer: http://localhost:8080/h2-console (JDBC URL `jdbc:h2:mem:jobtrac
 9. `AiService`: an HTTP call to an LLM, structured JSON output, and handling bad replies.
 10. Tests: a unit test (no Spring) and MockMvc integration tests.
 
-## Level-up exercises (do them, then add them to your resume)
+## Future Improvements
 
-1. Swap H2 for MySQL (change the driver and three lines in `application.properties`).
-2. Add a `StatusHistory` table so stats can show how far each application got, even after a rejection.
-3. Return response DTOs instead of exposing the entity directly.
-4. Add Spring Security with JWT so each user has private applications.
-5. Make the scheduler send an email instead of only logging.
-6. Dockerize it and deploy to Railway or Render, then put the live URL in the README.
+The following enhancements are planned for future releases:
+
+1. **MySQL Integration:** Replace the in-memory H2 database with persistent MySQL storage.
+2. **Application History:** Introduce a StatusHistory table to maintain a complete record of application status changes.
+3. **Response DTOs:** Separate API response models from database entities.
+4. **Authentication & Authorization:** Implement Spring Security and JWT-based authentication for secure, user-specific application tracking.
+5. **Email Notifications:** Extend the follow-up scheduler to send automated email reminders.
+6. **Containerization & Deployment:** Dockerize the application and deploy it to a cloud platform such as Railway or Render.
